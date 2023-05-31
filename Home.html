@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kanin Main Page</title>
+<link rel="stylesheet" type="text/css" href="Project.css">
+<script type="text/javascript" src="Project.js"></script>  
+</head>
+<body>
+<!-- HEADER -->
+<div class="header">
+	<!--Logo Section of Header-->
+	<div class="icon"><a href="Home.html"><img class="i_img" src="kanin_img.png"></a></div>
+	<!--Middle Section with Web Pages-->
+	<div class="hover">
+		<a class="nav" href="Home.html">HOME</a>
+		<a class="nav" href="categories.html">CATEGORIES</a>
+		<a class="nav" href="tips.html">KITCHEN TIPS</a>
+		<a class="nav" href="essentials.html">ESSENTIALS</a>
+		<a class="nav" href="about.html">ABOUT</a>
+	</div>
+	<!--Connection to Database-->
+	<form method="post" action="database.php"></form>
+</div>
+
+<!--Main BODY-->
+<!--First Section with Changing Background-->
+<a id="welcome-section"><div class="about_bg"><div class="inner_about_logo">
+<img class="image_float visible" src="kanin_img.png">
+<br><h2 class="visible">Welcome to <br>Ary's Recipes!!</h2>
+<p class="visible"><script>quote();</script></p>
+</div></div></a>
+
+<!-- Favorite Recipes-->
+<a id="fave-recipes"><div style="background-color: #F6F8ED; height: 600px"><br><br><center><h1> Favorite Recipes </h1><hr></center>
+<div class="fave">
+	<a href="https://www.jocooks.com/recipes/potato-croquettes/" class="t1 fry lunch img r7">Croquettes</a>
+	<a href="https://www.maangchi.com/recipe/samgyeopsal-gui" class="pork grill tp1 lunch dinner img r9">Samgyeopsal</a>
+	<a href="https://www.spendwithpennies.com/honey-garlic-wings-oven-baked/" class="chicken t1 bake airfry lunch dinner img r2">Honey Garlic Chicken Wings</a>
+	<a href="https://kathleenscravings.com/chocolate-chip-cookie-mug/" class="bake dessert t10 img r11">Chocolate Chip Cookie Mug</a>
+</div></div></a>
+	
+<!--Cooking Tips and Tricks-->
+<hr class="board"><div id="cooking-tips" style="background-color:rgb(235, 207, 141,0.3)">
+<br><br><center><h1>Cooking Tips and Tricks</h1><hr></center>
+	<!--First Tip-->
+	<div class="tips_tricks">
+	<div class="tips_text" style="float:left;"><h3>01</h3><h4 class="visible">Clean Knives and Surfaces</h4><br>
+	<p class="visible">For safe food preparation, don't cut raw meat, poultry or fish 
+	on the same surface or with the same knife without cleaning it thoroughly between uses. 
+	Wash your knife and cutting board with soap and hot water, or change the knife or board after each use.</p></div>
+	<div class="tips_image" style="float:right;"><img class="image_" src="https://images.cutco.com/wp-content/uploads/2014/12/knife-safety-7.jpg"></div>
+	</div></div>
+	<!--Second Tip-->
+	<div class="tips_tricks" style="background-color:rgb(190, 208, 164,0.6)">
+	<div class="tips_text" style="float:right;"><h3>02</h3><h4 class="visible">Stop boiling water from overflowing</h4><br>
+	<p class="visible">Place a wooden spoon lengthwise on top of the pot, and the water will not boil over. 
+	This works because the wood acts as a water repellant for the bubbles which stops it from rising, 
+	and the spoon being of a cooler temperature that when the bubbles meet the spoon, it condenses back into water.</p></div>
+	<div class="tips_image" style="float:left;"><img class="image" src="https://pbs.twimg.com/media/Di4wSuqUYAAayGx.jpg"></div>
+	</div>
+	<!--Third Tip-->
+	<div class="tips_tricks" style="background-color:rgb(235, 207, 141,0.3)">
+	<div class="tips_text" style="float:left;"><h3>03</h3><h4 class="visible">Read the whole recipe before starting</h4><br>
+	<p class="visible">It seems like common sense but is actually forgotten a lot.
+	It's important to read the whole recipe from ingredients to the cooking process so that you know
+	the basic structure and how it's made. It also helps if there are ingredients divided into portions that aren't
+	shown in the ingredients section.</p></div>
+	<div class="tips_image" style="float:right;"><img class="image_" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgcGSVRsFMYJGMrRn6CYKSjKemsk6mLwf_VQ&usqp=CAU"></div>
+	<!--Button Going to Tips Page-->
+	<center><a href="tips.html" class="tips_button">See More</a></center></div>
+	<hr class="board">
+
+<!--More Recipes-->
+<div id="more-recipes" style="background-color:#F6F8ED"><br><br><center><h1> Additional Recipes </h1> <hr></center>
+	<div class="more">
+	<a href="https://tiffycooks.com/spicy-stir-fry-noodles-20-minutes/" class="noodle t20 dinner fry img r1">Spicy Stir-fry Noodles</a>
+	<a href="https://www.recipetineats.com/chicken-fricassee-quick-french-chicken-stew/" class="chicken stew tp1 lunch dinner fry img r13">Chicken Fricassée</a>
+	<a href="https://www.allrecipes.com/recipe/79543/fried-rice-restaurant-style/" class="rice t20 fry lunch dinner img r4">Fried Rice</a>
+	<a href="https://www.taste.com.au/recipes/air-fryer-burrito-stuffed-chicken-recipe/rzi2jtmb?nk=76d63379df49b4fc0d4787b8b0327dd7-1684150382" class="t30 chicken airfry lunch img r6">Burrito Stuffed Chicken</a>
+	<a href="https://www.justonecookbook.com/beef-udon/" class="beef noodles t30 lunch boil fry img r12">Beef Udon</a>
+	<a href="https://panlasangpinoy.com/steamed-fish-with-scallions-and-ginger-recipe/" class="seafood t30 steam lunch dinner rice img r8">Steamed Fish</a>
+	<a href="https://www.abeautifulplate.com/spicy-tuna-onigiri/" class="seafood boil lunch t1 rice img r18">Spicy Tuna Onigiri</a>
+	<a href="https://healthyfitnessmeals.com/shrimp-stir-fry-noodles/" class="fry seafood noodle lunch dinner t30 img r19">Shrimp Stir-fry Noodles</a>
+	</div>
+	<!--Button Going to Categories Page-->
+	<br><br><br><center><a href="categories.html" class="recipes_button">More Recipes</a><br><br><br></center>
+</div>
+	
+<!--Biography-->
+<div class="bio" id="bio-section">
+	<div class="bio_imag"></div>
+	<div class="bio_text"><center><h2 style="font-size:3em;">About Kanin</h2> <hr></center><br><br>
+	<p class="visible">The website <i>Kanin</i> was created for a final web development project for the developer and user <i>Arwen Uy.</i><br><br>
+	The website is similar to other blog websites showcasing a user's own work. However, this website is different. <br><br>
+	This website was created as an organization website with only one client that is created to store all of <i>Arwen's"</i> top recipes.
+	The website contains recipes of her top meals, kitchen tips that help one cook effectively and effeciently, and a essentials page where
+	the most used ingredients and equipment Arwen uses are contained.</p> <br><br>
+	<!--Button Going to About Page-->
+	<center><a href="about.html" class="button visible">See More</a></center>
+	</div>
+</div>
+
+<!--Scroll to Top Button-->
+<div class="parallex">
+	<center><button onclick="scrollUp()" class="top">Scroll to Top</button></center>
+</div>
+<!--Footer-->
+<div class="footer">
+	<!--1st Section of Footer with Text and Social Medias-->
+	<div class="in_footer">
+	<h2>Welcome to Kanin!</h2>
+	<p>Arwen's personal cookbook <br>containing all the recipes she<br> needs and wants!</p>
+	<div class="socials">
+		<a href="https://www.instagram.com/arwens_me/"><img class="social insta" src="https://cdn1.iconfinder.com/data/icons/social-media-outline-6/128/SocialMedia_Instagram-Outline-256.png"></a>
+		<a href="https://www.facebook.com/arwen.uy.79/"><img class="social facebook" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-social-facebook-256.png"> </a>
+		<a href="https://www.youtube.com/channel/UCY8enwOJrld1IgWk5DPV0Ag"><img class="social youtube" src="https://cdn3.iconfinder.com/data/icons/remixicon-logos/24/youtube-line-256.png"></a>
+		<a href="mailto:1arwenuy@gmail.com"><img class="social mails" src="https://cdn0.iconfinder.com/data/icons/google-material-design-3-0/48/ic_mail_outline_48px-256.png"></a>
+	</div></div>
+	<!--2nd Section of Footer with Links to Webpages-->
+	<div class="in_footer in_footer_text" style="padding-top:50px;">
+		<a href="Home.html"><h5>Home</h5></a>
+		<a href="categories.html"><h5>Categories</h5></a>
+		<a href="tips.html"><h5>Kitchen Tips</h5></a>
+		<a href="essentials.html"><h5>Essentials</h5></a>
+		<a href="about.html"><h5>About</h5></a>
+	</div>
+	<!--3rd Section of Footer with links to sections of Main Page-->
+	<div class="in_footer in_footer_text" style="padding-top:50px;">
+		<a href="#welcome-section"><h5>Welcome Section</h5></a>
+		<a href="#fave-recipes"><h5>Favorite Recipes</h5></a>
+		<a href="#cooking-tips"><h5>Kitchen Tips</h5></a>
+		<a href="#more-recipes"><h5>More Recipes</h5></a>
+		<a href="#bio-section"><h5>Bio Section</h5></a>
+	</div>
+</div>
+</body>
+</html>

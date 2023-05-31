@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kanin Categories Page</title>
+<link rel="stylesheet" type="text/css" href="Project.css">
+<script type="text/javascript" src="Project.js"></script>  
+</head>
+<body style="background-color:#F6F6EB">
+<!-- HEADER -->
+<div class="header" style="border-bottom: 1px solid #DADADA;">
+	<!--Logo Section of Header-->
+	<div class="icon"><a href="Home.html"><img class="i_img" src="kanin_img.png"></a></div>
+	<!--Middle Section with Web Pages-->
+	<div class="hover">
+		<a class="nav" href="Home.html">HOME</a>
+		<a class="nav" href="categories.html">CATEGORIES</a>
+		<a class="nav" href="tips.html">KITCHEN TIPS</a>
+		<a class="nav" href="essentials.html">ESSENTIALS</a>
+		<a class="nav" href="about.html">ABOUT</a>
+	</div>
+	<!--Connection to Database-->
+	<form method="post" action="database.php"></form>
+</div>
+
+<!--Categories Body Page-->
+<div style="height:60px;"></div>
+<!--Drop Down Buttons on the Top Bar-->
+<div class="categories">
+	<!--Button Showing All Recipes-->
+	<button class="drop_button all_recipes">All Recipes</button>
+	<!--Drop Down Buttons Showing Recipes by Ingredients-->
+	<div class="categories_top">
+	<button class="drop_button">By Ingredients ⏷ </button>
+		<div class="categories_top_content">
+			<button class="show_" onclick="buttons()">Chicken</button>
+			<button class="show_" onclick="buttons()">Beef</button>
+			<button class="show_" onclick="buttons()">Pork</button>
+			<button class="show_" onclick="buttons()">Seafood</button>
+			<button class="show_" onclick="buttons()">Noodles</button>
+			<button class="show_" onclick="buttons()">Rice</button>
+			<button class="show_" onclick="buttons()">Dessert</button>
+		</div>
+	</div>
+	<!--Drop Down Buttons Showing Recipes by Cooking Time-->
+	<div class="categories_top">
+	<button class="drop_button">By Cooking Time ⏷ </button>
+		<div class="categories_top_content">
+			<button class="show_" onclick="buttons()">≤ 10 minutes</button>
+			<button class="show_" onclick="buttons()">20 minutes</button>
+			<button class="show_" onclick="buttons()">30 minutes</button>
+			<button class="show_" onclick="buttons()">1 hour</button>
+			<button class="show_" onclick="buttons()">> 1 hour</button>
+		</div>
+	</div>
+	<!--Drop Down Buttons Showing Recipes by Eating Time-->
+	<div class="categories_top">
+	<button class="drop_button">By Day Time ⏷ </button>
+		<div class="categories_top_content">
+			<button class="show_" onclick="buttons()">Breakfast</button>
+			<button class="show_" onclick="buttons()">Lunch</button>
+			<button class="show_" onclick="buttons()">Dinner</button>
+		</div>
+	</div>
+	<!--Drop Down Buttons Showing Recipes by Cooking Method-->
+	<div class="categories_top">
+	<button class="drop_button">By Cooking Method ⏷ </button>
+		<div class="categories_top_content">
+			<button class="show_" onclick="buttons()">Boil</button>
+			<button class="show_" onclick="buttons()">Fry</button>
+			<button class="show_" onclick="buttons()">Steam</button>
+			<button class="show_" onclick="buttons()">Bake</button>
+			<button class="show_" onclick="buttons()">Grill</button>
+			<button class="show_" onclick="buttons()">Stew</button>
+			<button class="show_" onclick="buttons()">Air Fry</button>
+			<button class="show_" onclick="buttons()">Slow Cook</button>
+		</div>
+	</div>
+</div><hr class="light_line">
+
+<!--Code Containing All the Recipes-->
+<div class="more_categories">
+	<a href="https://kathleenscravings.com/chocolate-chip-cookie-mug/" class="bake dessert t10 img r11">Chocolate Chip Cookie Mug</a>
+	<a href="https://tiffycooks.com/spicy-stir-fry-noodles-20-minutes/" class="noodle t20 dinner fry img r1">Spicy Stir-fry Noodles</a>
+	<a href="https://www.recipetineats.com/chicken-fricassee-quick-french-chicken-stew/" class="chicken stew tp1 lunch dinner fry img r13">Chicken Fricassée</a>
+	<a href="https://www.spendwithpennies.com/honey-garlic-wings-oven-baked/" class="chicken t1 bake airfry lunch dinner img r2">Honey Garlic Chicken Wings</a>
+	<a href="https://www.maangchi.com/recipe/samgyeopsal-gui" class="pork grill tp1 lunch dinner img r9">Samgyeopsal</a>
+	<a href="https://www.seriouseats.com/korean-chicken-and-rice-porridge-dak-juk" class="chicken rice tp1 slowcook boil breakfast lunch img r3">Chicken and Rice Porridge</a>
+	<a href="https://www.angsarap.net/2020/08/21/beef-lumpia/#tasty-recipes-39741-jump-target" class="beef fry t30 lunch dinner img r14">Beef Lumpia</a>
+	<a href="https://www.pumpkinnspice.com/easy-breakfast-quesadillas/" class="t20 fry breakfast img r5">Easy Breakfast Quesadillas</a>
+	<a href="https://www.kawalingpinoy.com/pork-adobo/#wprm-recipe-container-16158" class="pork t1 lunch dinner slowcook boil fry rice img r15">Pork Adobo</a>
+	<a href="https://www.yummy.ph/recipe/beef-nilaga-recipe" class="beef tp1 boil lunch dinner rice img r16">Beef Nilaga</a>
+	<a href="https://chefsavvy.com/30-minute-mongolian-beef/" class="beef tp1 boil lunch dinner rice img r17">Mongolian Beef</a>
+	<a href="https://www.allrecipes.com/recipe/79543/fried-rice-restaurant-style/" class="rice t20 fry lunch dinner img r4">Fried Rice</a>
+	<a href="https://www.taste.com.au/recipes/air-fryer-burrito-stuffed-chicken-recipe/rzi2jtmb?nk=76d63379df49b4fc0d4787b8b0327dd7-1684150382" class="t30 chicken airfry lunch img r6">Burrito Stuffed Chicken</a>
+	<a href="https://www.justonecookbook.com/beef-udon/" class="beef noodle t30 lunch boil fry img r12">Beef Udon</a>
+	<a href="https://www.happyfoodstube.com/homemade-churros/" class="fry dessert t30 img r10">Churros</a>
+	<a href="https://www.jocooks.com/recipes/potato-croquettes/" class="t1 fry lunch img r7">Croquettes</a>
+	<a href="https://panlasangpinoy.com/steamed-fish-with-scallions-and-ginger-recipe/" class="seafood t30 steam lunch dinner rice img r8">Steamed Fish</a>
+	<a href="https://www.abeautifulplate.com/spicy-tuna-onigiri/" class="seafood boil lunch t1 rice img r18">Spicy Tuna Onigiri</a>
+	<a href="https://healthyfitnessmeals.com/shrimp-stir-fry-noodles/" class="fry seafood noodle lunch dinner t30 img r19">Shrimp Stir-fry Noodles</a>
+	<a href="https://www.delicious.com.au/recipes/steamed-pork-rice-balls/2a29f2a3-13e1-4d7a-bfb7-cf1401368052?current_section=recipes&r=recipes/collections/ix63ydxw" class="pork steam t30 lunch dinner img r20">Chinese Pork Meatballs</a>
+	<a href="https://www.taste.com.au/recipes/tonkatsu-breaded-pork-loin/1235e00d-3883-4607-a46f-0cadb8c70dc8" class="pork fry t20 lunch dinner rice img r21">Breaded Pork Loin <br>(Tonkatsu)</a>
+	<a href="https://www.justonecookbook.com/oyakodon/#wprm-recipe-container-60584" class="t30 chicken rice fry lunch dinner img r22">Chicken & Egg Rice Bowl (Oyakadon)</a>
+	<a href="https://www.wandercooks.com/okonomiyaki-japanese-savoury-pancakes/#recipe" class="t30 fry breakfast lunch img r23">Japanese Pancakes <br>(Okonomiyaki)</a>
+	<a href="https://panlasangpinoy.com/chicken-pancit-medley/#wprm-recipe-container-48828" class="chicken noodle t1 boil fry lunch dinner img r24">Chicken Pancit</a>
+	<a href="https://www.simpol.ph/recipes/garlic-mushroom-chicken" class="chicken t30 fry stew lunch dinner img r25">Garlic Mushroom Chicken</a>
+	<a href="https://panlasangpinoy.com/homemade-pork-tocino-recipe/" class="pork tp1 slowcook fry lunch img r26">Pork Tocino</a>
+	<a href="https://www.dinneratthezoo.com/mongolian-chicken/#wprm-recipe-container-16765" class="chicken fry slowcook lunch dinner t30 img r27">Mongolian Chicken</a>
+	<a href="https://panlasangpinoy.com/sweet-and-sour-pork-recip/#recipe" class="pork t1 fry stew lunch dinner img r28">Sweet and Sour Pork</a>
+	<a href="https://www.simplyrecipes.com/recipes/spaghetti_alla_carbonara/" class="noodle t30 lunch dinner boil stew img r29">Carbonara</a>
+	<a href="https://www.maangchi.com/recipe/eomukguk" class="seafood boil t30 lunch dinner img r30">Fish Cake Soup <br>(Eomukguk)</a>
+	<a href="https://tiffycooks.com/korean-fried-chicken-bites-extra-crispy/" class="t1 chicken fry slowcook lunch img r31">Korean Fried Chicken Bites</a>
+	<a href="https://www.fooddolls.com/ground-beef-philly-cheesesteak/" class="t1 beef fry lunch bake img r32">Ground Beef Cheesesteak</a>
+	<a href="https://www.littlebroken.com/super-easy-korean-chicken-lettuce-wraps/#tasty-recipes-10300" class="chicken t30 fry slowcook lunch img r33">Korean Chicken Lettuce Wraps</a>
+	<a href="https://www.justataste.com/easy-beef-and-broccoli-recipe/" class="beef t20 fry slowcook lunch dinner img r34">Beef with Brocolli</a>
+	<a href="https://keytomylime.com/garlic-chicken-pasta-recipe/#mv-creation-233-jtr" class="noodle chicken t20 boil stew lunch dinner img r35">Garlic Chicken Pasta</a>
+	<a href="https://www.tasteofhome.com/recipes/cinnamon-breakfast-bites/" class="breakfast dessert bake t30 img r36">Cinnamon Breakfast Bites</a>
+	<a href="https://panlasangpinoy.com/bistek-tagalog-beefsteak-recipe/" class="beef t1 fry lunch rice dinner img r37">Bistek</a>
+	<a href="https://www.tasteofhome.com/recipes/creamy-banana-crepes/" class="dessert t20 slowcook img r38">Creamy Banana Crepes</a>
+	<a href="https://mykoreankitchen.com/korean-seaweed-soup-miyeok-guk/" class="boil breakfast lunch dinner t20 beef img r39">Korean Seaweed Soup</a>
+	<a href="https://www.bakedbyanintrovert.com/cranberry-pie/" class="tp1 dessert bake stew img r40">Cranberry Pie</a>
+	<a href="https://www.allrecipes.com/recipe/269892/gochujang-butter-shrimp/" class="seafood t30 slowcook lunch img r41">Gochujang Shrimp Lettuce Wraps</a>
+	<a href="https://www.sweetandsavorybyshinee.com/meatballs-in-mushroom-gravy/" class="t20 beef lunch dinner rice fry stew img r42">Beef Meatballs in Mushroom Gravy</a>
+	<a href="https://organicallyblissful.com/shrimp-balls-soup-with-napa-cabbage-and-glass-noodles/" class="seafood t20 boil lunch dinner img r43">Shrimp Balls Soup</a>
+	<a href="https://hungryhealthyhappy.com/tomato-egg-and-spinach-wrap/#recipe" class="t10 fry breakfast img r44">Breakfast Wraps</a>
+	<a href="https://www.justonecookbook.com/japanese-egg-sandwich-tamago-sando/#wprm-recipe-container-79981" class="breakfast lunch boil t30 img r45">Japanese Egg Sandwich <br>(Tamago Sando)</a>
+	<a href="https://tiffycooks.com/creamy-crab-croquette/" class="t30 fry lunch seafood img r46">Crab Croquettes</a>
+	<a href="https://simplyhomecooked.com/easy-hanami-dango-recipe/" class="t1 dessert slowcook boil img r47">Dango</a>
+	<a href="https://www.dinneratthezoo.com/steamed-clams-in-garlic-butter/" class="seafood steam t30 lunch dinner img r48">Garlic Butter Steamed Clams</a>
+	<a href="https://www.allrecipes.com/recipe/7016/french-toast-i/" class="breakfast fry t10 img r49">French Toast</a>
+	<a href="https://theunlikelybaker.com/mango-graham-cake-filipino-mango-float-recipe/" class="tp1 dessert slowcook img r50">Mango Graham Cake</a>
+	<a href="https://www.foodnetwork.com/recipes/tyler-florence/the-ultimate-beef-wellington-recipe2-1952280" class="tp1 beef fry slowcook bake dinner img r51">Beef Wellington</a>
+	<a href="https://www.kawalingpinoyrecipe.com/desserts/corn_ice_candy.htm" class="dessert t10 img r52">Mais Con Queso Ice Candy</a>
+</div><br><br>
+
+<!--Scroll to Top Button-->
+<div class="parallex">
+	<center><button onclick="scrollUp()" class="top">Scroll to Top</button></center>
+</div>
+<!--Footer-->
+<div class="footer">
+	<!--1st Section of Footer with Text and Social Medias-->
+	<div class="in_footer">
+	<h2>Welcome to Kanin!</h2>
+	<p>Arwen's personal cookbook <br>containing all the recipes she<br> needs and wants!</p>
+	<div class="socials">
+		<a href="https://www.instagram.com/arwens_me/"><img class="social insta" src="https://cdn1.iconfinder.com/data/icons/social-media-outline-6/128/SocialMedia_Instagram-Outline-256.png"></a>
+		<a href="https://www.facebook.com/arwen.uy.79/"><img class="social facebook" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-social-facebook-256.png"> </a>
+		<a href="https://www.youtube.com/channel/UCY8enwOJrld1IgWk5DPV0Ag"><img class="social youtube" src="https://cdn3.iconfinder.com/data/icons/remixicon-logos/24/youtube-line-256.png"></a>
+		<a href="mailto:1arwenuy@gmail.com"><img class="social mails" src="https://cdn0.iconfinder.com/data/icons/google-material-design-3-0/48/ic_mail_outline_48px-256.png"></a>
+	</div></div>
+	<!--2nd Section of Footer with Links to Webpages-->
+	<div class="in_footer in_footer_text" style="padding-top:50px;">
+		<a href="Home.html"><h5>Home</h5></a>
+		<a href="categories.html"><h5>Categories</h5></a>
+		<a href="tips.html"><h5>Kitchen Tips</h5></a>
+		<a href="essentials.html"><h5>Essentials</h5></a>
+		<a href="about.html"><h5>About</h5></a>
+	</div>
+	<!--3rd Section of Footer with links to sections of Categories Page-->
+	<div class="in_footer in_footer_text" style="padding-top:50px;">
+		<a href="categories.html"><h5>All Recipes</h5></a>
+	</div>
+</div>
+
+<!--Drop Down Javascript Code-->
+<script>
+var a = document.getElementsByClassName("show_");
+var img = document.getElementsByClassName('img');
+//Chicken
+var chicken = document.getElementsByClassName('chicken');
+a[0].addEventListener('click', function(){
+	for (let i = 0; i < chicken.length; i++) {
+	chicken[i].style.setProperty("display", "flex");}});
+//Beef
+var beef = document.getElementsByClassName('beef');
+a[1].addEventListener('click', function(){
+	for (let i = 0; i < beef.length; i++) {
+	beef[i].style.setProperty("display", "flex");}});
+//Pork
+var pork = document.getElementsByClassName('pork');
+a[2].addEventListener('click', function(){
+	for (let i = 0; i < pork.length; i++) {
+	pork[i].style.setProperty("display", "flex");}});
+//Seafood
+var seafood = document.getElementsByClassName('seafood');
+a[3].addEventListener('click', function(){
+	for (let i = 0; i < seafood.length; i++) {
+	seafood[i].style.setProperty("display", "flex");}});
+//Noodle
+var noodle = document.getElementsByClassName('noodle');
+a[4].addEventListener('click', function(){
+	for (let i = 0; i < noodle.length; i++) {
+	noodle[i].style.setProperty("display", "flex");}});
+//Rice
+var rice = document.getElementsByClassName('rice');
+a[5].addEventListener('click', function(){
+	for (let i = 0; i < rice.length; i++) {
+	rice[i].style.setProperty("display", "flex");}});
+//Dessert
+var dessert = document.getElementsByClassName('dessert');
+a[6].addEventListener("click", function(){
+	for (let i = 0; i < dessert.length; i++) 
+	{dessert[i].style.setProperty("display", "flex");}})
+//t10
+var t10 = document.getElementsByClassName('t10');
+a[7].addEventListener('click', function(){
+	for (let i = 0; i < t10.length; i++) {
+	t10[i].style.setProperty("display", "flex");}});
+//20 minutes
+var t20 = document.getElementsByClassName('t20');
+a[8].addEventListener('click', function(){
+	for (let i = 0; i < t20.length; i++) {
+	t20[i].style.setProperty("display", "flex");}});
+//30 minutes
+var t30 = document.getElementsByClassName('t30');
+a[9].addEventListener('click', function(){
+	for (let i = 0; i < t30.length; i++) {
+	t30[i].style.setProperty("display", "flex");}});
+//1 hour
+var t1 = document.getElementsByClassName('t1');
+a[10].addEventListener('click', function(){
+	for (let i = 0; i < t1.length; i++) {
+	t1[i].style.setProperty("display", "flex");}});
+//1+ minutes
+var tp1 = document.getElementsByClassName('tp1');
+a[11].addEventListener('click', function(){
+	for (let i = 0; i < tp1.length; i++) {
+	tp1[i].style.setProperty("display", "flex");}});
+//breakfast
+var breakfast = document.getElementsByClassName('breakfast');
+a[12].addEventListener('click', function(){
+	for (let i = 0; i < breakfast.length; i++) {
+	breakfast[i].style.setProperty("display", "flex");}});
+//lunch
+var lunch = document.getElementsByClassName('lunch');
+a[13].addEventListener('click', function(){
+	for (let i = 0; i < lunch.length; i++) {
+	lunch[i].style.setProperty("display", "flex");}});
+//dinner
+var dinner = document.getElementsByClassName('dinner');
+a[14].addEventListener('click', function(){
+	for (let i = 0; i < dinner.length; i++) {
+	dinner[i].style.setProperty("display", "flex");}});
+//boil
+var boil = document.getElementsByClassName('boil');
+a[15].addEventListener('click', function(){
+	for (let i = 0; i < boil.length; i++) {
+	boil[i].style.setProperty("display", "flex");}});
+//fry
+var fry = document.getElementsByClassName('fry');
+a[16].addEventListener('click', function(){
+	for (let i = 0; i < fry.length; i++) {
+	fry[i].style.setProperty("display", "flex");}});
+//steam
+var steam = document.getElementsByClassName('steam');
+a[17].addEventListener('click', function(){
+	for (let i = 0; i < steam.length; i++) {
+	steam[i].style.setProperty("display", "flex");}});
+//bake
+var bake = document.getElementsByClassName('bake');
+a[18].addEventListener('click', function(){
+	for (let i = 0; i < bake.length; i++) {
+	bake[i].style.setProperty("display", "flex");}});
+//grill
+var grill = document.getElementsByClassName('grill');
+a[19].addEventListener('click', function(){
+	for (let i = 0; i < grill.length; i++) {
+	grill[i].style.setProperty("display", "flex");}});
+//stew
+var stew = document.getElementsByClassName('stew');
+a[20].addEventListener('click', function(){
+	for (let i = 0; i < stew.length; i++) {
+	stew[i].style.setProperty("display", "flex");}});
+//air fry
+var airfry = document.getElementsByClassName('airfry');
+a[21].addEventListener('click', function(){
+	for (let i = 0; i < airfry.length; i++) {
+	airfry[i].style.setProperty("display", "flex");}});
+//slow cook
+var slowcook = document.getElementsByClassName('slowcook');
+a[22].addEventListener('click', function(){
+	for (let i = 0; i < slowcook.length; i++) {
+	slowcook[i].style.setProperty("display", "flex");}});	
+</script>
+</body>
+</html>

@@ -1,0 +1,631 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Georgia, Times,Times New Roman,serif;
+}
+hr{
+	border: 3px solid black;
+	border-radius: 5px;
+	width:40%;
+	margin-left:2px;
+	box-shadow: rgba(141, 144, 147, 0.3) 2px 3px;
+}
+.light_line{/*hr bordering sections of a page subtly*/
+	border: 2px solid rgb(155, 183, 108,0.6);
+	border-radius: 5px;
+	width:99%;
+	box-shadow: none;
+	margin-left:8px;
+}
+.board{/*hr border tips section in main page*/
+	border: 2px solid white;
+	border-radius: 5px;
+	width:98%;
+	text-align:center;
+	box-shadow: none;
+}
+h1{
+	font-size: 2.5em;
+	font-style: oblique;
+	margin: 5px;
+}
+h2{
+	font-size: 2.1em;
+	margin: 8px;
+}
+h3{
+	font-size: 4.5em;
+	margin-top:0px;
+	font-style: oblique;
+}
+h4{
+	font-size: 1.5em;
+	font-style: italic;
+	font-variant: small-caps;
+}
+h5{
+	margin-top: 25px;
+	font-size: 1.2em;
+}
+p{font-size: 1.2em;}
+
+/*CSS of Header and Footer
+HEADER*/
+.header{
+	display: flex;
+	width: 100%;
+	height:60px;
+	position:fixed;
+	background-color:rgb(246, 246, 235,0.8);
+	z-index: 2;
+}
+.icon{
+	position:relative;
+    padding:11.5px 8px 7.5px 15px;
+    stroke:none;
+	width: 80px;
+}
+.i_img{
+	bottom:10px;
+	right:10px;
+	width: 40px;
+	height: auto;
+}
+.i_img:hover{
+	width: 45px;
+	transition: width .1s;
+}
+.hover{
+	display: flex;
+	align-items: center;
+	margin-left: 260px;
+	gap:110px;
+	padding: 15px 0;
+	font-family: monospace;
+}
+.nav{
+	position: relative;
+	text-decoration: none;
+	font-size: 18px;
+	color:black;
+}
+/*Highlight when hovering*/
+	.nav::before {  
+	  transform: scaleX(0);
+	  transform-origin: bottom right;
+	}
+	.nav:hover::before {
+	  transform: scaleX(1);
+	  transform-origin: bottom left;
+	}
+	.nav::before{
+	  content: " ";
+	  display: block;
+	  position: absolute;
+	  top: 0; right: 0; bottom: 0; left: 0;
+	  inset: 0 0 0 0;
+	  background: #E6DED3;
+	  z-index: -1;
+	  transition: transform .5s ease;
+	}
+/*FOOTER*/
+/*Scroll to top with parallex background*/
+	.parallex{
+	  background-image: url("https://wallpapercave.com/wp/wp7161274.jpg");
+	  min-height: 180px; 
+	  background-attachment: fixed;
+	  background-position: center;
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	}
+	.top {
+	  font-size: 22px;
+	  border: none;
+	  outline: none;
+	  background-color: #D6C8A4;
+	  color: #F6F6EB;
+	  cursor: pointer;
+	  padding: 15px;
+	  border-radius: 50%;
+	  margin-top: 60px;
+	}
+	.top:hover {
+	  background-color: #F6F6EB;
+	  color: #D6C8A4;
+	}
+.footer{
+	display: flex;
+	background-color:rgb(246, 246, 235,0.6);
+	color:black;
+	height: 400px;
+}
+.in_footer{
+	width: 480px;
+	text-align: center;
+	padding: 60px;
+}
+.in_footer_text{
+	text-align: left;
+	padding-left:200px;
+}
+.in_footer a{
+	text-decoration: none;
+	color: black;
+	line-height: 1.5;
+}
+.in_footer a:hover{
+	text-decoration: none;
+	color: #A18367;
+	font-size: 1.1em;
+}
+/*Social Media images in footer*/
+	.socials{
+		margin:20px;
+		padding: 10px;
+		display:flex;
+		justify-content: center;
+		grid-gap: 30px;
+	}
+	.social{
+		border-radius: 50%;
+		height: 50px; width: 50px;
+		background-color: white;
+		padding: 8px;
+		border:2px solid black;
+	}
+	.insta:hover{background-image: linear-gradient(#4f5bd5,#962fbf,#d62976,#fa7e1e,#feda75);}
+	.facebook:hover{background-color: #3b5998;}
+	.youtube:hover{background-color: #FF0000;}
+	.mails:hover{background-image: linear-gradient(#9CFCF8,#6E7BFB);}
+
+/*Title section in pages: tips, essentials, about*/
+.title{
+	padding-left: 90px;
+	padding-right: 90px;
+	text-align: center;
+	background-color:#F6F6EB;
+}
+.title h1{font-size: 3em;}
+.title hr{
+	width:50%;
+	margin-left:2px;
+}
+/*text will pop up when visible on screen through scroll*/
+.visible {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: all 1s ease-out;
+}
+.pVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*Main Page CSS*/
+/*Top Section with Changing Background*/
+	.about_bg{	
+		height: 690px;
+		background-repeat: no-repeat;
+		background-size: 100%;
+		animation: changing_bg 60s ease-in infinite;
+	}
+	@keyframes changing_bg{
+		0% {background-image:url("https://www.seriouseats.com/thmb/tuMCogfAOy2zNdVqE7ydUwuru9Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/easy-vegetable-fried-rice-recipe-hero-2-fed2a62b8bce4c51b945d9c24c2edb68.jpg")}
+		25% {background-image:url("https://www.seriouseats.com/thmb/tuMCogfAOy2zNdVqE7ydUwuru9Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/easy-vegetable-fried-rice-recipe-hero-2-fed2a62b8bce4c51b945d9c24c2edb68.jpg")}
+		30% {background-image:url("https://images.summitmedia-digital.com/yummyph/images/2017/12/06/beef-bulgogi-topping.jpg")}
+		65% {background-image:url("https://images.summitmedia-digital.com/yummyph/images/2017/12/06/beef-bulgogi-topping.jpg")}
+		70% {background-image:url("https://chewonthis.blog/wp-content/uploads/2020/10/Gimbap.png")}
+		95% {background-image:url("https://chewonthis.blog/wp-content/uploads/2020/10/Gimbap.png")}
+		100% {background-image:url("https://www.seriouseats.com/thmb/tuMCogfAOy2zNdVqE7ydUwuru9Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/easy-vegetable-fried-rice-recipe-hero-2-fed2a62b8bce4c51b945d9c24c2edb68.jpg")}
+	}
+.inner_about_logo{
+	margin-left:20px;
+	width: 510px;
+	position: relative;
+	justify-content: center;
+	padding: 140px 50px 50px 50px;
+	text-align:center;
+	color:white;
+	text-shadow: 4px 4px black;
+}
+.inner_about_logo h2{
+	border: 2px solid gray;
+	padding: 5px;
+}
+.inner_about_logo p{
+	font-size: 1.5em;
+	text-shadow: 2px 2px black;
+}
+.image_float{
+	border-radius: 50%;
+	height: 260px;
+	width: 330px;
+	transform: translate(0px);
+	animation: float 6s ease-in-out infinite;
+	padding: 10px;
+}
+@keyframes float{
+	0% {transform: translate(-15px);}
+	50% {transform: translate(15px);}
+	100% {transform: translate(-15px);}
+}
+.fave{/*Img CSS for favorite recipes section*/
+	display: flex;
+	grid-gap: 20px;
+	padding-right: 25px;
+	padding-left: 25px;
+}
+/*See more button in tips section*/
+	.tips_button{
+		background-color: rgb(155, 183, 108,0.6);
+		font-size: 20px;
+		padding: 10px;
+		border-radius: 12px;
+		border: 2px solid #f6f6eb;
+		text-decoration: none;
+		transition-duration: 0.4s;
+		color:#f6f6eb;
+	}
+	.tips_button:hover {
+		background-color: #f6f6eb;
+		color: rgb(155, 183, 108);
+		border-color: rgb(155, 183, 108);
+	}
+.more{ /*Img CSS for Additional Recipes Section*/
+	width: 100%;
+	display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(auto, 5vw);
+	grid-gap: 20px;
+	padding-right: 25px;
+	padding-left: 25px;
+}
+/*More recipes button in recipes section*/
+	.recipes_button{
+		background-color: rgb(222, 195, 130,0.3);
+		font-size: 20px;
+		padding: 10px;
+		border-radius: 12px;
+		border: 2px solid gray;
+		text-decoration: none;
+		transition-duration: 0.4s;
+		color:black;
+	}
+	.recipes_button:hover {
+		background-color: rgb(155, 183, 108,0.6);
+		color: #F6F6EB;
+		border-color:lightgray;
+	}
+ /*Bio Section*/
+.bio{
+	display:flex;
+	height: 500px;
+	width: 97%;
+	padding: 20px;
+	margin: 20px;
+	background-color:rgb(222, 195, 130,0.3);
+	align-items:center;
+}
+.bio_imag{
+	width: 46%;
+	height: 100%;
+	margin-left:20px;
+	background-size: cover;
+	float:right;
+	animation: bio_bg 40s ease-in infinite;
+}
+@keyframes bio_bg{
+	0% {background-image:url("https://www.modernhoney.com/wp-content/uploads/2017/09/Mongolian-Beef-3.jpg")}
+	60% {background-image:url("kanin_i.png")}
+	100% {background-image:url("https://www.modernhoney.com/wp-content/uploads/2017/09/Mongolian-Beef-3.jpg")}
+}
+.bio_text{
+	width: 53%;
+	padding: 20px 20px 45px 40px;
+	margin-left: 20px;
+	float:right;
+}
+	/*See more button in Bio Section*/
+		.button{
+			background-color: white;
+			font-size: 16px;
+			padding: 10px;
+			border-radius: 12px;
+			border: 2px solid black;
+			text-decoration: none;
+			transition-duration: 0.4s;
+			color:black;
+		}
+		.button:hover {
+			background-color: rgb(155, 183, 108,0.6);
+			color: #F6F6EB;
+			border-color:#F6F6EB;
+		}
+
+/*Categories Page CSS*/
+.categories{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 80px;
+}
+.categories_top{
+	display: inline-block;
+	position: relative;
+	gap: 80px;
+}
+.categories_top_content{
+    display: none;
+	position: absolute;
+	background-color: #F6F6EB;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+/*Drop buttons for categories*/
+	.drop_button{
+		background-color: #F6F6EB;
+		color: black;
+		padding: 16px;
+		font-size: 16px;
+		border: none;
+	}
+	.categories_top:hover .categories_top_content {
+		display: block;
+	}
+	.categories_top_content button{
+		color: black;
+		padding: 12px 12px;
+		text-decoration: none;
+		border:none;
+		display: block;
+		width: 160px;
+	}
+	.categories_top_content button:hover{
+		background-color: #ddd;
+	}
+	.categories_top_content button:hover, .categories_top_content:hover .drop_button {
+	  background-color: #E6DED3;
+	}
+.more_categories{/*Div containing the recipes*/
+	width: 100%;
+	padding-right: 25px;
+	padding-left: 25px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.img {/*Recipe Images Design*/
+	text-decoration: none;
+	font-size: 25px;
+	color:white;
+	text-shadow: 2px 2px #5c5c5c;
+	width: 300px;
+	border: 3px solid black;
+	border-radius: 10px;
+	height: 400px;
+	margin:auto;
+	margin-top:40px;
+	display:flex;
+	justify-content: center;
+	align-items: end;
+	text-align: center;
+	padding: 20px;
+	padding-bottom: 30px;
+	background-size: cover;
+	opacity:0.85;
+	transition: transform 5s ease-in-out 0.5s;
+	box-shadow: rgba(226, 229, 222,0.6) 5px 5px, rgba(226, 229, 222, 0.5) 10px 10px, rgba(226, 229, 222, 0.3) 15px 15px;
+}
+.img:hover{opacity: 1;}
+	/*Recipe Backgrounds*/
+		.r1{background-image:url("https://tiffycooks.com/wp-content/uploads/2023/05/C404B50C-D303-4C2D-81F8-0F6E11FF0398-768x1024.jpg");}
+		.r2{background-image:url("https://www.spendwithpennies.com/wp-content/uploads/2014/01/SpendWithPennies-Honey-Garlic-Wings-23.jpg");}
+		.r3{background-image:url("https://www.seriouseats.com/thmb/OfIqi5ld_QccZs_sapLQS6S9-XQ=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/20200128-juk-korean-rice-porridge-vicky-wasik-7ba5f400330d4c4b947d1c8669ccbe0a.JPG");}
+		.r4{background-image:url("https://www.allrecipes.com/thmb/Cq9i-i5F6sty6NW6lO0i81LRHiQ=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/79543-fried-rice-restaurant-style-step-6-102-2e5637fd5ba144c998c7c2ee9b68d354.jpg");}
+		.r5{background-image:url("https://www.pumpkinnspice.com/wp-content/uploads/2016/03/easy-breakfast-quesadillas-11-683x1024.jpg");}
+		.r6{background-image:url("https://img.taste.com.au/h8JxxNj4/taste/2021/04/air-fryer-burrito-stuffed-chicken-170485-2.jpg");}
+		.r7{background-image:url("https://www.jocooks.com/wp-content/uploads/2018/02/potato-croquettes-1.jpg");}
+		.r8{background-image:url("https://panlasangpinoy.com/wp-content/uploads/2012/06/Steamed-Fish-with-Ginger-and-Scallions.jpg");}
+		.r9{background-image:url("https://www.honestfoodtalks.com/wp-content/uploads/2022/04/Samgyeopsal.jpg")}
+		.r10{background-image:url("https://www.happyfoodstube.com/wp-content/uploads/2015/09/homemade-churros-picture.jpg")}
+		.r11{background-image:url("https://preppykitchen.com/wp-content/uploads/2023/01/Cookie-in-a-Mug-Feature.jpg")}
+		.r12{background-image:url("https://www.justonecookbook.com/wp-content/uploads/2021/11/Beef-Udon-4316-II.jpg")}
+		.r13{background-image:url("https://www.recipetineats.com/wp-content/uploads/2021/09/Chicken-Fricasse_05.jpg")}
+		.r14{background-image:url("https://i0.wp.com/www.angsarap.net/wp-content/uploads/2020/05/Beef-Lumpia.jpg?ssl=1")}
+		.r15{background-image:url("https://www.kawalingpinoy.com/wp-content/uploads/2013/02/filipino-pork-adobo-3-1-360x361.jpg")}
+		.r16{background-image:url("https://gobblethecook.com/wp-content/uploads/2022/05/b16c657f717b89a73d6b85961ea35f6b.jpg")}
+		.r17{background-image:url("https://i0.wp.com/chefsavvy.com/wp-content/uploads/Easy-Mongolian-Beef-1.jpg?w=665&ssl=1")}
+		.r18{background-image:url("https://www.abeautifulplate.com/wp-content/uploads/2017/08/spicy-tuna-onigiri-3.jpg")}
+		.r19{background-image:url("https://healthyfitnessmeals.com/wp-content/uploads/2018/10/Shrimp-stir-fry-zoodles-9.jpg")}
+		.r20{background-image:url("https://img.delicious.com.au/ePj15kj2/w759-h506-cfill/del/2015/10/steamed-chinese-style-pork-meatballs-23541-2.jpg")}
+		.r21{background-image:url("https://nomnompaleo.com/wp-content/uploads/2022/10/1200-Tonkatsu-DSC_3488.jpg")}
+		.r22{background-image:url("https://www.justonecookbook.com/wp-content/uploads/2022/10/Oyakodon-0613-I-500x500.jpg")}
+		.r23{background-image:url("https://www.wandercooks.com/wp-content/uploads/2020/10/okonomiyaki-japanese-pancake-recipe-3-768x1152.jpg")}
+		.r24{background-image:url("https://panlasangpinoy.com/wp-content/uploads/2019/03/Filipino-Pancit-Recipe.jpg")}
+		.r25{background-image:url("https://www.simpol.ph/wp-content/uploads/2020/11/GARLIC-MUSHROOM-CHICKEN-636x1024.jpg")}
+		.r26{background-image:url("https://panlasangpinoy.com/wp-content/uploads/2019/02/Tocino-Recipe.jpg")}
+		.r27{background-image:url("https://www.dinneratthezoo.com/wp-content/uploads/2018/08/mongolian-chicken-4-500x500.jpg")}
+		.r28{background-image:url("https://panlasangpinoy.com/wp-content/uploads/2019/08/sweet-and-sour-pork.jpg")}
+		.r29{background-image:url("https://www.simplyrecipes.com/thmb/9DSEOemXX-gGJQBJqsY-qDzRjDw=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Simply-Recipes-Spaghetti-Carbonara-LEAD-6-b3880a6eb49f4158be6f13885c797ded.jpg")}
+		.r30{background-image:url("https://www.maangchi.com/wp-content/uploads/2013/01/sizzle_fishcakesoup-620x349.jpg")}
+		.r31{background-image:url("https://lh5.googleusercontent.com/IGwnihB3fV3av7c3anRdxGPSSBHCtWaac5NUOFbSvLZZl8dSnIsMqKDtmvRzBgFlvN0oOjT2NFTs_v9Z5RtZ0Wg3jw__zlIt9wKQJdftrw3gU2xYAZAgVYDbVDiDEsikBwFCT3is")}
+		.r32{background-image:url("https://www.fooddolls.com/wp-content/uploads/2022/03/IMG_6054.jpg")}
+		.r33{background-image:url("https://www.littlebroken.com/wp-content/uploads/2021/01/Korean-Chicken-Lettuce-Wraps-17.jpg")}
+		.r34{background-image:url("https://www.justataste.com/wp-content/uploads/2018/01/easy-beef-and-broccoli-recipe-689x1040.jpg")}
+		.r35{background-image:url("https://flyingcdn-cf8480cb.b-cdn.net//wp-content/uploads/2021/08/Bowl-of-Garlic-Chicken-Pasta.jpg?width=1500")}
+		.r36{background-image:url("https://www.tasteofhome.com/wp-content/uploads/2018/01/Cinnamon-Breakfast-Bites_EXPS_FT21_11959_F_0224_1.jpg?fit=700,1024")}
+		.r37{background-image:url("https://panlasangpinoy.com/wp-content/uploads/2018/11/Filipino-Bistek-Tagalog-Recipe.jpg")}
+		.r38{background-image:url("https://www.tasteofhome.com/wp-content/uploads/2018/01/Creamy-Banana-Crepes_EXPS_HCA21_20543_B05_18_8b.jpg?fit=700,1024")}
+		.r39{background-image:url("https://mykoreankitchen.com/wp-content/uploads/2007/07/2.-Seaweed-Soup.jpg")}
+		.r40{background-image:url("https://www.bakedbyanintrovert.com/wp-content/uploads/2018/10/Cranberry-Pie-Image.jpg")}
+		.r41{background-image:url("https://www.allrecipes.com/thmb/9ELol4KdD194FmChaVvf4x5xR-0=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/6234692-ec514d99cf1a459184424e5713381c60.jpg")}
+		.r42{background-image:url("https://www.sweetandsavorybyshinee.com/wp-content/uploads/2022/05/Meatballs-in-Mushroom-Gravy-1-650x975.jpg")}
+		.r43{background-image:url("https://organicallyblissful.com/wp-content/uploads/2021/02/shrimp-balls-soup-1232x1536.jpg.webp")}
+		.r44{background-image:url("https://hungryhealthyhappy.com/wp-content/uploads/2022/07/breakfast-wrap-finished-1.jpg")}
+		.r45{background-image:url("https://www.justonecookbook.com/wp-content/uploads/2019/03/Tamago-Sando-II.jpg")}
+		.r46{background-image:url("https://tiffycooks.com/wp-content/uploads/2023/05/A0789A98-06ED-47EB-B104-51B17C614D02-768x1024.jpg")}
+		.r47{background-image:url("https://simplyhomecooked.com/wp-content/uploads/2021/02/dango-recipe-16.jpg")}
+		.r48{background-image:url("https://www.dinneratthezoo.com/wp-content/uploads/2020/05/steamed-clams-4.jpg")}
+		.r49{background-image:url("https://d1e3z2jco40k3v.cloudfront.net/-/media/project/oneweb/mccormick-us/mccormick/recipe-images/quick_and_easy_french_toast_new_800x800.webp?rev=472bd38acf3f4e80b329915ba486cae1&vd=20220809T202043Z&hash=34381AE86E477B12B64277F710290F21")}
+		.r52{background-image:url("https://i.ytimg.com/vi/tpai8Z-lg48/maxresdefault.jpg")}
+		.r51{background-image:url("https://images.immediate.co.uk/production/volatile/sites/30/2012/09/Beef-wellington-d4f3320.jpg")}
+		.r50{background-image:url("https://www.kawalingpinoy.com/wp-content/uploads/2017/06/mango-royale-7.jpg")}
+
+/*Tips Page CSS*/
+.tips_tricks{
+	width: 100%;
+	height: 500px;
+	padding-top: 30px;
+	padding-bottom: 50px;
+	padding-left: 130px;
+	padding-right: 130px;
+}
+.tips_text{
+	width: 54%;
+	padding: 50px;
+	height: 100%;
+	color:black;
+}
+
+.tips_image{
+	width: 45%;
+	padding: auto;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.image_{
+	border-radius: 50%;
+	height: 260px;
+	width: 300px;
+	border: 2px solid black;
+	box-shadow: rgba(208,208,208,0.6) 10px 10px;
+	animation: size 5s ease infinite;
+}
+@keyframes size {
+  0% {width: 280px; height:240px}
+  50% {width: 310px; height:270px}
+  100% {width: 280px; height:240px}
+}
+.image_float:hover, .image:hover, .image_:hover, .s:hover{animation-play-state: paused;}
+.image{
+	border-radius: 50%;
+	height: 260px;
+	width: 300px;
+	border: 2px solid black;
+	box-shadow: rgba(182, 182, 182,0.6) -10px 10px;
+	animation: size 5s ease infinite;
+}
+
+/*Essentials Page CSS*/
+.essentials_grid{
+	display: grid;
+	grid-gap: auto;
+	padding: 0px 40px 60px 40px;
+	grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(auto, 10vw);
+}
+.essentials_grid a{
+	border: 3px solid black;
+	border-radius: 10px;
+	box-shadow: rgba(141, 144, 147,0.5) 5px 5px, rgba(141, 144, 147, 0.3) 10px 10px, rgba(141, 144, 147, 0.1) 15px 15px;
+	height: 350px;width: 320px; 
+	display:flex;
+	justify-content:center;
+	margin:auto;
+	margin-top:40px;
+}
+.essentials_grid img{margin:40px;}
+
+/*About Page CSS*/
+/*Links going to sections in About Page*/
+	.anchor_links{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 150px;
+		padding: 25px 0;
+	}
+	.anchor_links a{
+		font-size: 18px;
+		color: black;
+		text-decoration: none;
+	}
+ /*About Logo*/
+.about_body{margin: 10px 50px 50px 50px;}	
+.no_bg{
+	animation:none;
+	background-color: #f6f6eb;
+	background-image:url("https://www.gastronomiavasca.net/uploads/image/file/3902/arroz_grano_largo.jpg");
+	background-position:center;
+	background-size: 1370px 640px;
+}
+.change_bg{
+	background-repeat: no-repeat;
+	animation: change_bg 20s ease-in infinite;
+}
+@keyframes change_bg{
+	0% {background-position:left;background-size:auto 254px;background-image:url("https://www.modernhoney.com/wp-content/uploads/2017/09/Mongolian-Beef-3.jpg")}
+	60% {background-position:center;background-size:auto 250px; background-image:url("kanin_i.png")}
+	100% {background-position:left;background-size:auto 254px;background-image:url("https://www.modernhoney.com/wp-content/uploads/2017/09/Mongolian-Beef-3.jpg")}
+}
+.about_logo{
+	margin-left:20px;
+	width: 510px;
+	position: relative;
+	justify-content: center;
+	padding: 120px 50px 50px 50px;
+	text-align:center;
+}
+.about_logo h2{
+	border: 2px solid gray;
+	padding: 5px;
+	text-shadow: 3px 3px gray;
+	margin-top:20px;
+}
+.about_logo p{text-shadow: none;}
+ /*About Website*/
+.About_website{
+	width:93.5%;
+	margin:50px;
+	padding: 30px 60px 40px;
+	background-color:rgb(190, 208, 164,0.3);
+}
+ /*About Creator*/
+.bio1{
+	height: 600px;
+	padding: 10px;
+	margin:50px;
+	background-color:rgb(243, 227, 188,0.3);
+}
+.bio_image1{
+	width: 40%;
+	height: 540px;
+	float: left;
+	margin:20px;
+	margin-left:40px;
+	background-size:cover;
+	background-repeat:no-repeat;
+	animation: creator_bg 20s ease-in infinite;
+}
+@keyframes creator_bg{
+	0% {background-image:url("1.jpg")}
+	60% {background-image:url("2.jpg")}
+	90% {background-image:url("3.jpg")}
+	100%{background-image:url("1.jpg")}
+}
+.bio_text1{
+	margin-top:20px;
+	width: 48%;
+	padding: 10px;
+	margin-left:50px;
+	float: left;
+}
+.social1{
+	border: 2px solid blue;
+	border-radius: 50%;
+	height: 60px; width: 60px;
+	padding: 5px;
+}
